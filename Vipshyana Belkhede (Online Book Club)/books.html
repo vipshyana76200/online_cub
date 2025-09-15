@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Book Club</title>
+    
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #1e3c72;
+            color: white;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+    #googleSearchForm {
+    margin-bottom: 20px;
+}
+
+#googleSearchBar {
+    width: 70%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#googleSearchForm button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#googleSearchForm button:hover {
+    background-color: #cc5500;
+}
+
+        /* Book List Section */
+        .book-list {
+            background: white;
+            padding: 40px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .book {
+            display: inline-block;
+            width: 250px;
+            margin: 15px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .book img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .book h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .book p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .book a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .book a:hover {
+            background-color: #cc5500;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Featured Books</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Search Bar -->
+    <div style="margin-top: 20px;">
+        <input type="text" id="googleSearchBar" placeholder="Search for a book..." 
+               style="padding: 10px; width: 60%; border-radius: 5px; border: 1px solid #ccc;">
+        <button onclick="searchGoogleBooks()" 
+                style="padding: 10px 15px; background-color: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Search
+        </button>
+    </div>
+</header>
+
+<script>
+    function searchGoogleBooks() {
+        let query = document.getElementById("googleSearchBar").value;
+        if (query.trim() !== "") {
+            let googleSearchURL = "https://www.google.com/search?q=" + encodeURIComponent(query) + "+Google+Books";
+            window.open(googleSearchURL, "_blank");
+        }
+    }
+</script>
+
+    <section class="book-list">
+        <h2>Explore Free Books</h2>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="Moby Dick">
+            <h3>Moby Dick</h3>
+            <p>By: Herman Melville</p>
+            <a href="https://www.google.com/search?q=Moby+Dick+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/10523058-L.jpg" alt="The Adventures of Sherlock Holmes">
+            <h3>The Adventures of Sherlock Holmes</h3>
+            <p>By: Arthur Conan Doyle</p>
+            <a href="https://www.google.com/search?q=The+Adventures+of+Sherlock+Holmes+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/10519879-L.jpg" alt="The Call of the Wild">
+            <h3>The Call of the Wild</h3>
+            <p>By: Jack London</p>
+            <a href="https://www.google.com/search?q=The+Call+of+the+Wild+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/11031564-L.jpg" alt="Pride and Prejudice">
+            <h3>Pride and Prejudice</h3>
+            <p>By: Jane Austen</p>
+            <a href="https://www.google.com/search?q=Pride+and+Prejudice+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8225290-L.jpg" alt="1984">
+            <h3>1984</h3>
+            <p>By: George Orwell</p>
+            <a href="https://www.google.com/search?q=1984+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8228780-L.jpg" alt="The Catcher in the Rye">
+            <h3>The Catcher in the Rye</h3>
+            <p>By: J.D. Salinger</p>
+            <a href="https://www.google.com/search?q=The+Catcher+in+the+Rye+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8225460-L.jpg" alt="The Hobbit">
+            <h3>The Hobbit</h3>
+            <p>By: J.R.R. Tolkien</p>
+            <a href="https://www.google.com/search?q=The+Hobbit+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8236761-L.jpg" alt="Wuthering Heights">
+            <h3>Wuthering Heights</h3>
+            <p>By: Emily Brontë</p>
+            <a href="https://www.google.com/search?q=Wuthering+Heights+Google+Books" target="_blank">Read for Free</a>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8236762-L.jpg" alt="Crime and Punishment">
+            <h3>Crime and Punishment</h3>
+            <p>By: Fyodor Dostoevsky</p>
+            <a href="https://www.google.com/search?q=Crime+and+Punishment+Google+Books" target="_blank">Read for Free</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Book Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

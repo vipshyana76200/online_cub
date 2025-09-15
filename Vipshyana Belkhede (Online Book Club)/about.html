@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Book Club</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #17253a, #010d13);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            background: #1e4bb5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #003d80;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #000000;
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 40px 20px;
+            flex-grow: 1;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #e2d8d8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 20s infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Animation for changing background images */
+        @keyframes bgChange {
+            0% {
+                background-image: url('https://images.unsplash.com/photo-1728406970237-bc699733f027?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            }
+
+            25% {
+                background-image: url('https://media.istockphoto.com/id/2158306486/photo/dna-structure-helix-deoxyribonucleic-acid-nucleic-acid-molecules-genome-research-method.webp?a=1&s=612x612&w=0&k=20&c=YdOtbSzjftVYmrHBsPrtJ4WFSkdffS7rywYTJDR8p-4=Image/bg2.jpg');
+            }
+
+            50% {
+                background-image: url('Image/bg3.jpg');
+            }
+
+            75% {
+                background-image: url('Image/bg4.jpg');
+            }
+
+            100% {
+                background-image: url('Image/bg1.jpg');
+            }
+        }
+
+        /* Developers Section */
+        .developers {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .developer {
+            background: rgb(199, 26, 133);
+            padding: 20px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(78, 4, 50);
+            text-align: left;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .developer:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .developer img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .developer h3 {
+            margin-top: 80px;
+            color: #0f0018;
+        }
+
+        .developer p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .developer a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #001138;
+            font-weight: bold;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #070000;
+            color: rgb(28, 36, 6);
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 24px;
+                padding: 15px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+
+            .content h2 {
+                font-size: 28px;
+            }
+
+            .developer {
+                width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 22px;
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .developer {
+                width: 95%;
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>About the Developers</header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="events.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="about.html">About Us</a>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Meet the Developers</h2>
+        <div class="developers">
+
+            <div class="developer">
+                <img src="Image/Developer1.jpg" alt="Vipshyans Belkhede">
+                <h3>Vipshyans Ambadas Belkhede</h3>
+                <p>Passionate web developer with expertise in front-end technologies. Focused on creating interactive
+                    book club websites.</p>
+                <p><strong>Education:</strong> BSc in Computer Science</p>
+                <p><strong>Email:</strong> <a href="mailto:vipshyanabelkhede@gmail.com">vipshyanabelkhede@gmail.com</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Explore Online Book Club. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
